@@ -6,7 +6,7 @@ A sample project that uses Github Actions CI/CD to automatically push commits fr
 1. Create a Gitlab access token with write_repository access permissions. Copy the key.
 2. In your GitHub project, go to settings->secrets and add the key that you copied as a secret. Name it something like: GITLAB_PUSH_KEY
 3. Now, go to Gitlab and create a new repository. You can either create a new repository or clone your Github repo. In this example, I am using https://code.il2.dsop.io/chkodama/test-upstream-github
-3. Next, go back to Github and create a file `gitlab.yml` and put it at /.github/workflows/gitlab.yml, making the folder structrure if it's not already there. Here's what you want in the contents of the file: 
+3. Next, go back to Github and create the YML file. You can either do this by going to the 'Actions' section and starting a blank action, or you can make a blank file `gitlab.yml` and put it at /.github/workflows/gitlab.yml, making the folder structrure if it's not already there. Here's what you want in the contents of the file: 
 
 ```
 name: Push to GitLab CI
