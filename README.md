@@ -33,7 +33,7 @@ jobs:
           git config --global credential.helper cache
           git config --global core.askPass ./creds.sh
           git remote add mirror "${{ env.GITLAB_REPO }}"
-          git push -u mirror "${{ env.BRANCH }}":"${{ env.DEST_BRANCH }}"
+          git push --force -u mirror "${{ env.BRANCH }}":"${{ env.DEST_BRANCH }}"
 ```
 
 4. You will need to edit the values corresponding to BRANCH, DEST_BRANCH, and GITLAB_REPO to the correct values for you. In this example, I'm taking the 'master' branch from github and pushing changes from it into the 'github' branch in Gitlab. (You will also need to rename secrets.GITLAB_PUSH_KEY if you named the secret key something else).
