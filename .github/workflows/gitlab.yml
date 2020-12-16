@@ -22,4 +22,4 @@ jobs:
           git config --global credential.helper cache
           git config --global core.askPass ./creds.sh
           git remote add mirror "${{ env.GITLAB_REPO }}"
-          git push -u mirror "${{ env.BRANCH }}":"${{ env.DEST_BRANCH }}"
+          git push --force -u mirror "${{ env.BRANCH }}":"${{ env.DEST_BRANCH }}"
