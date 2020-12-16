@@ -38,4 +38,4 @@ jobs:
 
 4. You will need to edit the values corresponding to BRANCH, DEST_BRANCH, and GITLAB_REPO to the correct values for you. In this example, I'm taking the 'master' branch from github and pushing changes from it into the 'github' branch in Gitlab. (You will also need to rename secrets.GITLAB_PUSH_KEY if you named the secret key something else).
 
-5. Commit changes and it *should* work!
+5. Commit changes and it should work (hopefully)! In this example I'm pushing to the 'github' branch in gitlab, and my workflow would be to manually merge into (gitlab's) master from there. If you wanted it to push directly into gitlab's master (maybe not recommended though), just configure it above to go to master on both ends.
